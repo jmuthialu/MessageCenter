@@ -21,7 +21,6 @@
 		B8F2A1F12C21FC6600897E28 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1EA2C21FC6600897E28 /* URLBuilder.swift */; };
 		B8F2A1F22C21FC6600897E28 /* NetworkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1E92C21FC6600897E28 /* NetworkFactory.swift */; };
 		B8F2A1F32C21FC6600897E28 /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1E62C21FC6600897E28 /* HTTPService.swift */; };
-		B8F2A1F42C21FC6600897E28 /* URLPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1EB2C21FC6600897E28 /* URLPath.swift */; };
 		B8F2A1F82C21FD2D00897E28 /* Messages.json in Resources */ = {isa = PBXBuildFile; fileRef = B8F2A1F72C21FD2D00897E28 /* Messages.json */; };
 		B8F2A1FA2C21FD5900897E28 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1F92C21FD5900897E28 /* Message.swift */; };
 		B8F2A2122C21FE6900897E28 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8F2A2082C21FE6900897E28 /* Poppins-Light.ttf */; };
@@ -79,7 +78,6 @@
 		B8F2A1E82C21FC6600897E28 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		B8F2A1E92C21FC6600897E28 /* NetworkFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFactory.swift; sourceTree = "<group>"; };
 		B8F2A1EA2C21FC6600897E28 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
-		B8F2A1EB2C21FC6600897E28 /* URLPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPath.swift; sourceTree = "<group>"; };
 		B8F2A1F72C21FD2D00897E28 /* Messages.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Messages.json; sourceTree = "<group>"; };
 		B8F2A1F92C21FD5900897E28 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		B8F2A1FE2C21FE6900897E28 /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
@@ -128,9 +126,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B8A2A95B2C22347E004E2F85 /* Messages */ = {
+		B8A2A95C2C224519004E2F85 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				B8DDAF082C220CCC00898B26 /* MessagesViewModel.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -234,7 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				B8F2A1FB2C21FDAD00897E28 /* Home */,
-				B8A2A95B2C22347E004E2F85 /* Messages */,
+				B8A2A95C2C224519004E2F85 /* Messages */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -265,7 +264,6 @@
 				B8F2A1E62C21FC6600897E28 /* HTTPService.swift */,
 				B8F2A1E72C21FC6600897E28 /* MockHTTPService.swift */,
 				B8F2A1EA2C21FC6600897E28 /* URLBuilder.swift */,
-				B8F2A1EB2C21FC6600897E28 /* URLPath.swift */,
 				B8F2A1E82C21FC6600897E28 /* NetworkError.swift */,
 			);
 			name = Network;
@@ -276,7 +274,6 @@
 			isa = PBXGroup;
 			children = (
 				B8F2A1B22C21F4D300897E28 /* HomeView.swift */,
-				B8DDAF082C220CCC00898B26 /* MessagesViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -487,7 +484,6 @@
 				B8F2A1F22C21FC6600897E28 /* NetworkFactory.swift in Sources */,
 				B88D20A12C2227ED0021B92F /* MessagesAPI.swift in Sources */,
 				B8F2A1F32C21FC6600897E28 /* HTTPService.swift in Sources */,
-				B8F2A1F42C21FC6600897E28 /* URLPath.swift in Sources */,
 				B8F2A1B12C21F4D300897E28 /* MainApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

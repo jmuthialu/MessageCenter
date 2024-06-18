@@ -18,5 +18,4 @@ class BaseAPI {
                                                    urlSession: urlSession)
     }
 
-    
 }

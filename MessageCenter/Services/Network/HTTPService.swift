@@ -9,6 +9,10 @@ import Foundation
 
 class HTTPService: NetworkService {
     
+    struct Constant {
+        static let successCode: Int = 200
+    }
+    
     let urlSession: URLSession
     
     init(urlSession: URLSession = URLSession.shared) {
@@ -22,7 +26,7 @@ class HTTPService: NetworkService {
             throw NetworkError.noHTTPURLResponse(#function)
         }
         
-        guard httpResponse.statusCode == 200 else {
+        guard httpResponse.statusCode == Constant.successCode else {
             throw NetworkError.errorStatusCode(httpResponse.statusCode, #function)
         }
         
