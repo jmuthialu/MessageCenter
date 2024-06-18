@@ -15,23 +15,22 @@ struct HomeView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Spacer()
+                .frame(height: 50)
+            
+            Image("roomsToGo")
+                .padding()
+            
+            Text("Message Center")
+                .font(FontPalette.largeRegular.font)
+                .padding(.bottom, 30)
+            
+            Text("Enter your email to search for your messages")
+                .font(FontPalette.mediumRegular.font)
+            
+            Spacer()
         }
         .padding()
-        .task {
-            let emailId = "mtaylor@gmail.com"
-            //            let emailId = "cshort@gmail.com"
-            //            let emailId = "oduke@gmail.com"
-            
-            if emailId.isValidEmailId() {
-                await viewModel.getMessages(forEmailID: emailId)
-            } else {
-                print("Error: Failed email validation \(emailId)")
-            }
-        }
     }
 }
 
