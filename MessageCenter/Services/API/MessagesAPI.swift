@@ -7,20 +7,11 @@
 
 import Foundation
 
-class MessagesAPI {
+class MessagesAPI: BaseAPI {
     
     struct Constants {
         static let path = "/messages/users"
         static let mockFile = "Messages.json"
-    }
-    
-    private let networkService: NetworkService
-    
-    init(forType serviceType: NetworkFactory.ServiceType = .http,
-         urlSession: URLSession = URLSession.shared) {
-        
-        networkService = NetworkFactory.getService(forType: serviceType,
-                                                   urlSession: urlSession)
     }
     
     func getMessages(forEmailId emailId: String) async throws -> [Message]? {

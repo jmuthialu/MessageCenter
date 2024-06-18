@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @ObservedObject var viewModel = MessagesViewModel(
-        messagesAPI: MessagesAPI(forType: .http)
+        messagesAPI: MessagesAPI(forType: .mock)
     )
     
     var body: some View {

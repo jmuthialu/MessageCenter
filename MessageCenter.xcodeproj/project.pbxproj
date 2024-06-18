@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B88D20A12C2227ED0021B92F /* MessagesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D20A02C2227ED0021B92F /* MessagesAPI.swift */; };
 		B88D20A32C222FAD0021B92F /* EmailValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D20A22C222FAD0021B92F /* EmailValidationTests.swift */; };
+		B88D20A52C2232150021B92F /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D20A42C2232150021B92F /* BaseAPI.swift */; };
 		B8DDAF092C220CCC00898B26 /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DDAF082C220CCC00898B26 /* MessagesViewModel.swift */; };
 		B8F2A1B12C21F4D300897E28 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1B02C21F4D300897E28 /* MainApp.swift */; };
 		B8F2A1B32C21F4D300897E28 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1B22C21F4D300897E28 /* HomeView.swift */; };
@@ -64,6 +65,7 @@
 		B88D209F2C2221440021B92F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B88D20A02C2227ED0021B92F /* MessagesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesAPI.swift; sourceTree = "<group>"; };
 		B88D20A22C222FAD0021B92F /* EmailValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationTests.swift; sourceTree = "<group>"; };
+		B88D20A42C2232150021B92F /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		B8DDAF082C220CCC00898B26 /* MessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewModel.swift; sourceTree = "<group>"; };
 		B8F2A1AD2C21F4D300897E28 /* MessageCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F2A1B02C21F4D300897E28 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 		B8F2A1E32C21FC6600897E28 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				B88D20A42C2232150021B92F /* BaseAPI.swift */,
 				B88D20A02C2227ED0021B92F /* MessagesAPI.swift */,
 			);
 			name = API;
@@ -471,6 +474,7 @@
 				B8F2A1B32C21F4D300897E28 /* HomeView.swift in Sources */,
 				B8F2A1EE2C21FC6600897E28 /* Logger.swift in Sources */,
 				B8DDAF092C220CCC00898B26 /* MessagesViewModel.swift in Sources */,
+				B88D20A52C2232150021B92F /* BaseAPI.swift in Sources */,
 				B8F2A1EF2C21FC6600897E28 /* MockHTTPService.swift in Sources */,
 				B8F2A1F02C21FC6600897E28 /* NetworkError.swift in Sources */,
 				B8F2A1F12C21FC6600897E28 /* URLBuilder.swift in Sources */,
