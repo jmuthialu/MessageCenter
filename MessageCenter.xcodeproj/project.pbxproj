@@ -128,6 +128,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8A2A95B2C22347E004E2F85 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
 		B8F2A1A42C21F4D300897E28 = {
 			isa = PBXGroup;
 			children = (
@@ -227,7 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				B8F2A1FB2C21FDAD00897E28 /* Home */,
-				B8F2A1FC2C21FDBD00897E28 /* Messages */,
+				B8A2A95B2C22347E004E2F85 /* Messages */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -272,13 +279,6 @@
 				B8DDAF082C220CCC00898B26 /* MessagesViewModel.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		B8F2A1FC2C21FDBD00897E28 /* Messages */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Messages;
 			sourceTree = "<group>";
 		};
 		B8F2A1FD2C21FDFD00897E28 /* Fonts */ = {
