@@ -6,9 +6,9 @@
 //
 
 enum URLPath: String {
-    case photos = "/photos"
+    case messages = "/messages/users"
 }
 
 enum MockPath: String {
-    case photos = "Photos.json"
+    case photos = "Messages.json"
 }

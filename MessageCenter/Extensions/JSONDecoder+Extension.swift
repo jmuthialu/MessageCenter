@@ -20,4 +20,3 @@ extension JSONDecoder.DateDecodingStrategy {
         return formattedDate
     }
 }
-

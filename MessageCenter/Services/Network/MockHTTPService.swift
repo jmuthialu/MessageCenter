@@ -9,7 +9,7 @@ import Foundation
 
 struct MockHTTPService: NetworkService {
     
-    func getData<T>(urlRequest: URLRequest) async throws -> T? where T : Decodable {
+    func getData<T>(urlRequest: URLRequest) async throws -> T? where T: Decodable {
         let data = try loadFromFile(urlRequest: urlRequest)
         
         let jsonDecoder = JSONDecoder()

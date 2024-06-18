@@ -34,7 +34,7 @@ class HTTPService: NetworkService {
         
         let jsonDecoder = JSONDecoder()
         jsonDecoder.dateDecodingStrategy = .iso8601Fractional
-        let result = try jsonDecoder.decode(T.self, from: data)
-        return result
+        let modelData = try jsonDecoder.decode(T.self, from: data)
+        return modelData
     }
 }

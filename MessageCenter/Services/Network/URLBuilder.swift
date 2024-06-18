@@ -11,18 +11,11 @@ struct URLBuilder {
     
     struct Constant {
         static let scheme = "https"
-        static let host = "api.unsplash.com"
-        static let apiKey = "12ed97d4dfa3d6c2cb6b05e407bec679de632f8392b37ec23df0b3809979e337"
-        static let authHeaderKey = "Authorization"
-        static let authorization = "Client-ID \(Constant.apiKey)"
+        static let host = "vcp79yttk9.execute-api.us-east-1.amazonaws.com"
         static let httpGET = "GET"
         static let httpPOST = "POST"
     }
-    
-    var baseHeaders: [String: String] {
-        [Constant.authHeaderKey: Constant.authorization]
-    }
-    
+        
     func getURL(for path: String, queryItems: [URLQueryItem]) -> URL? {
         var components = URLComponents()
         components.scheme = Constant.scheme
@@ -34,9 +27,12 @@ struct URLBuilder {
 
     func getURLRequest(for path: String,
                        queryItems: [URLQueryItem],
-                       headers: [String: String]) -> URLRequest? {
+                       headers: [String: String]) throws -> URLRequest? {
         
-        guard let url = getURL(for: path, queryItems: queryItems) else { return nil }
+        guard let url = getURL(for: path, queryItems: queryItems) else {
+            Logger.log(tag: .networkModule, message: "URL could not be obtained")
+            throw NetworkError.incorrectURL
+        }
         
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = Constant.httpGET

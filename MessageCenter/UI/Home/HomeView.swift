@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @ObservedObject var viewModel = MessagesViewModel(networkServiceType: .mock)
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -16,6 +19,17 @@ struct HomeView: View {
             Text("Hello, world!")
         }
         .padding()
+        .task {
+            let emailId = "mtaylor@gmail.com"
+            //            let emailId = "cshort@gmail.com"
+            //            let emailId = "oduke@gmail.com"
+            
+            if emailId.isValidEmailId() {
+                await viewModel.getMessages(emailID: emailId)
+            } else {
+                print("Error: Failed email validation \(emailId)")
+            }
+        }
     }
 }
 

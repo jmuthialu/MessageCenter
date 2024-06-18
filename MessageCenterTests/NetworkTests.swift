@@ -14,5 +14,4 @@ final class NetworkTests: XCTestCase {
         let apiService = APIService(forType: .mock)
     }
 
-
 }

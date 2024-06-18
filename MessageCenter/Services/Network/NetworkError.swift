@@ -19,7 +19,7 @@ enum NetworkError: Error, CustomStringConvertible {
             return "Failed HTTP status code: \(statusCode)"
         case .incorrectURL:
             return "Incorrect URL String"
-        case let .invalidMockFile (fileName):
+        case let .invalidMockFile(fileName):
             return "Invalid mock file: \(fileName)"
         case .noHTTPURLResponse:
             return "No valid HTTPURLResponse"

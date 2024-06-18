@@ -21,4 +21,3 @@ extension Formatter {
         return formatter
     }()
 }
-

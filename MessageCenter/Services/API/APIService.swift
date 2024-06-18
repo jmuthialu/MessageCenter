@@ -20,10 +20,12 @@ class APIService {
     }
       
     func getData<T: Decodable>(forPath path: String,
-                               queryItems: [URLQueryItem] = []) async throws -> [T]? {
+                               queryItems: [URLQueryItem] = [],
+                               headers: [String: String] = [:]
+    ) async throws -> [T]? {
+        
         if networkService is HTTPService {
-            let headers = urlBuilder.baseHeaders
-            guard let urlRequest = urlBuilder.getURLRequest(
+            guard let urlRequest = try urlBuilder.getURLRequest(
                 for: path,
                 queryItems: queryItems,
                 headers: headers
