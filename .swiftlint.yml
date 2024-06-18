@@ -1,0 +1,62 @@
+disabled_rules:
+    # needs investigation
+    - force_cast #112 ^
+    - todo #67 ^
+    - notification_center_detachment #4
+    # needs manual fixing
+    - identifier_name #98              
+    # will take a lot of work
+    - cyclomatic_complexity #16 - big refactor
+    # who cares?
+    - nesting #11 - not sure we care about this.
+    # things we don't want
+    - trailing_whitespace #lots           
+    - unused_optional_binding #27  
+    - discouraged_direct_init
+    - block_based_kvo
+    - class_delegate_protocol       
+    - weak_delegate       
+    - closure_parameter_position
+    - empty_enum_arguments
+opt_in_rules:
+    - overridden_super_call
+    # - closure_spacing #57
+    # - conditional_returns_on_newline #519
+    # - empty_count #39
+    # - force_unwrapping #77
+    # - missing_docs #380
+    # - private_outlet #341
+    # - switch_case_on_newline #37
+
+large_tuple:
+  warning: 4
+  error: 4
+type_name:
+  min_length: 4 # only warning
+  max_length: # warning and error
+    warning: 50
+    error: 60
+  excluded:
+    - Ad
+    - H2
+    - H3
+    - H4
+    - CTA
+    - Url
+    - Hub
+line_length: 350
+function_parameter_count: 8
+function_body_length: 100
+type_body_length:
+  warning: 600
+  error: 600
+file_length:
+  warning: 1200
+  error: 1200 
+
+excluded:
+    - Libraries
+    - Scripts
+    - Pods
+    - Carthage
+    - vendor
