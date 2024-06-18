@@ -11,6 +11,7 @@
 		B88D20A32C222FAD0021B92F /* EmailValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D20A22C222FAD0021B92F /* EmailValidationTests.swift */; };
 		B88D20A52C2232150021B92F /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D20A42C2232150021B92F /* BaseAPI.swift */; };
 		B8A2A9602C224856004E2F85 /* FontPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A95F2C224856004E2F85 /* FontPalette.swift */; };
+		B8A2A9622C225009004E2F85 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B8A2A9612C225009004E2F85 /* Localizable.xcstrings */; };
 		B8DDAF092C220CCC00898B26 /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DDAF082C220CCC00898B26 /* MessagesViewModel.swift */; };
 		B8F2A1B12C21F4D300897E28 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1B02C21F4D300897E28 /* MainApp.swift */; };
 		B8F2A1B32C21F4D300897E28 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1B22C21F4D300897E28 /* HomeView.swift */; };
@@ -66,6 +67,7 @@
 		B88D20A22C222FAD0021B92F /* EmailValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationTests.swift; sourceTree = "<group>"; };
 		B88D20A42C2232150021B92F /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		B8A2A95F2C224856004E2F85 /* FontPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPalette.swift; sourceTree = "<group>"; };
+		B8A2A9612C225009004E2F85 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		B8DDAF082C220CCC00898B26 /* MessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewModel.swift; sourceTree = "<group>"; };
 		B8F2A1AD2C21F4D300897E28 /* MessageCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F2A1B02C21F4D300897E28 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				B8F2A2252C21FE7D00897E28 /* Info.plist */,
 				B8F2A1B42C21F4D400897E28 /* Assets.xcassets */,
 				B8F2A1B62C21F4D400897E28 /* Preview Content */,
+				B8A2A9612C225009004E2F85 /* Localizable.xcstrings */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -206,8 +209,8 @@
 		B8F2A1DE2C21FBF200897E28 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B8F2A1E32C21FC6600897E28 /* API */,
 				B8F2A1E52C21FC6600897E28 /* Components */,
+				B8F2A1E32C21FC6600897E28 /* API */,
 				B8F2A1EC2C21FC6600897E28 /* Network */,
 			);
 			path = Services;
@@ -389,6 +392,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-MX",
 			);
 			mainGroup = B8F2A1A42C21F4D300897E28;
 			packageReferences = (
@@ -425,6 +429,7 @@
 				B8F2A21E2C21FE6900897E28 /* Poppins-SemiBold.ttf in Resources */,
 				B8F2A21F2C21FE6900897E28 /* OFL.txt in Resources */,
 				B8F2A2202C21FE6900897E28 /* Poppins-Black.ttf in Resources */,
+				B8A2A9622C225009004E2F85 /* Localizable.xcstrings in Resources */,
 				B8F2A2212C21FE6900897E28 /* Poppins-ExtraLight.ttf in Resources */,
 				B8F2A2222C21FE6900897E28 /* Poppins-Italic.ttf in Resources */,
 				B8F2A2232C21FE6900897E28 /* Poppins-BlackItalic.ttf in Resources */,
@@ -567,6 +572,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -623,6 +629,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

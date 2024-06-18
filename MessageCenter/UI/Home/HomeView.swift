@@ -21,11 +21,11 @@ struct HomeView: View {
             Image("roomsToGo")
                 .padding()
             
-            Text("Message Center")
+            Text("messageCenter")
                 .font(FontPalette.largeRegular.font)
                 .padding(.bottom, 30)
             
-            Text("Enter your email to search for your messages")
+            Text("enterYourEmail")
                 .font(FontPalette.mediumRegular.font)
             
             Spacer()
