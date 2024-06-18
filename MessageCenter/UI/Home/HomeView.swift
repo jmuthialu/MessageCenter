@@ -9,7 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @ObservedObject var viewModel = MessagesViewModel(networkServiceType: .mock)
+    @ObservedObject var viewModel = MessagesViewModel(
+        messagesAPI: MessagesAPI(forType: .http)
+    )
     
     var body: some View {
         VStack {
@@ -25,7 +27,7 @@ struct HomeView: View {
             //            let emailId = "oduke@gmail.com"
             
             if emailId.isValidEmailId() {
-                await viewModel.getMessages(emailID: emailId)
+                await viewModel.getMessages(forEmailID: emailId)
             } else {
                 print("Error: Failed email validation \(emailId)")
             }

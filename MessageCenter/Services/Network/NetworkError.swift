@@ -8,21 +8,21 @@
 import Foundation
 
 enum NetworkError: Error, CustomStringConvertible {
-    case errorStatusCode(Int)
-    case incorrectURL
-    case invalidMockFile(String)
-    case noHTTPURLResponse
+    case errorStatusCode(Int, String)
+    case incorrectURL(String)
+    case invalidMockFile(String, String)
+    case noHTTPURLResponse(String)
     
     var description: String {
         switch self {
-        case .errorStatusCode(let statusCode):
-            return "Failed HTTP status code: \(statusCode)"
-        case .incorrectURL:
-            return "Incorrect URL String"
-        case let .invalidMockFile(fileName):
-            return "Invalid mock file: \(fileName)"
-        case .noHTTPURLResponse:
-            return "No valid HTTPURLResponse"
+        case let .errorStatusCode(statusCode, functionDetails):
+            return "Failed with HTTP status code: \(statusCode) at: \(functionDetails)"
+        case let .incorrectURL(functionDetails):
+            return "Incorrect URL String at: \(functionDetails)"
+        case let .invalidMockFile(fileName, functionDetails):
+            return "Could not load mock file: \(fileName) at: \(functionDetails)"
+        case let .noHTTPURLResponse(functionDetails):
+            return "No valid HTTPURLResponse at: \(functionDetails)"
         }
     }
 }

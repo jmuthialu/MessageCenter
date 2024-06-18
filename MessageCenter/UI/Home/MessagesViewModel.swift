@@ -11,30 +11,32 @@ import Combine
 
 class MessagesViewModel: ObservableObject {
     
-    var apiService: APIService
+    var messagesAPI: MessagesAPI
 
     @Published var messages = [Message]()
     @Published var showProgressView = true
 
-    init(networkServiceType: NetworkFactory.ServiceType) {
-        apiService = APIService(forType: networkServiceType)
+    init(messagesAPI: MessagesAPI) {
+        self.messagesAPI = messagesAPI
     }
 
     @discardableResult
     @MainActor
-    func getMessages(emailID: String) async -> [Message] {
+    func getMessages(forEmailID emailId: String) async -> [Message] {
         do {
-            let path = URLPath.messages.rawValue + "/" + emailID
-            
-            let messageArray: [Message] = try await apiService.getData(forPath: path) ?? []
+            let messageArray: [Message] = try await messagesAPI.getMessages(forEmailId: emailId) ?? []
             
             print("messageArray: \(messageArray)")
             messages = messageArray.sorted { $0.date! > $1.date! }
         } catch {
             if let error = error as? NetworkError {
-                Logger.log(tag: .messagesView, logType: .error, message: "getMessages() with desc: \(error.description)")
+                Logger.log(tag: .messagesView, 
+                           logType: .error,
+                           message: "\(#function): \(error.description)")
             } else {
-                Logger.log(tag: .messagesView, logType: .error, message: "getMessages(): \(error)")
+                Logger.log(tag: .messagesView, 
+                           logType: .error,
+                           message: "\(#function): \(error)")
             }
 
         }

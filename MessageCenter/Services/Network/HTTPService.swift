@@ -19,22 +19,15 @@ class HTTPService: NetworkService {
         let (data, response) = try await urlSession.data(for: urlRequest)
         
         guard let httpResponse = response as? HTTPURLResponse else {
-            Logger.log(tag: .networkModule,
-                       logType: .error,
-                       message: "Could not convert to HTTPURLResponse")
-            throw NetworkError.noHTTPURLResponse
+            throw NetworkError.noHTTPURLResponse(#function)
         }
         
         guard httpResponse.statusCode == 200 else {
-            Logger.log(tag: .networkModule,
-                       logType: .error,
-                       message: "Error: getData(): Unsucessful status code: \(httpResponse.statusCode)")
-            throw NetworkError.errorStatusCode(httpResponse.statusCode)
+            throw NetworkError.errorStatusCode(httpResponse.statusCode, #function)
         }
         
         let jsonDecoder = JSONDecoder()
-        jsonDecoder.dateDecodingStrategy = .iso8601Fractional
-        let modelData = try jsonDecoder.decode(T.self, from: data)
-        return modelData
+        jsonDecoder.dateDecodingStrategy = .customISO8601Fractional
+        return try jsonDecoder.decode(T.self, from: data)
     }
 }

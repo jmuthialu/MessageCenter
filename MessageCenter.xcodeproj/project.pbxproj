@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B88D20A12C2227ED0021B92F /* MessagesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D20A02C2227ED0021B92F /* MessagesAPI.swift */; };
+		B88D20A32C222FAD0021B92F /* EmailValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D20A22C222FAD0021B92F /* EmailValidationTests.swift */; };
 		B8DDAF092C220CCC00898B26 /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DDAF082C220CCC00898B26 /* MessagesViewModel.swift */; };
 		B8F2A1B12C21F4D300897E28 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1B02C21F4D300897E28 /* MainApp.swift */; };
 		B8F2A1B32C21F4D300897E28 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1B22C21F4D300897E28 /* HomeView.swift */; };
 		B8F2A1B52C21F4D400897E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F2A1B42C21F4D400897E28 /* Assets.xcassets */; };
 		B8F2A1B82C21F4D400897E28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F2A1B72C21F4D400897E28 /* Preview Assets.xcassets */; };
-		B8F2A1ED2C21FC6600897E28 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1E22C21FC6600897E28 /* APIService.swift */; };
 		B8F2A1EE2C21FC6600897E28 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1E42C21FC6600897E28 /* Logger.swift */; };
 		B8F2A1EF2C21FC6600897E28 /* MockHTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1E72C21FC6600897E28 /* MockHTTPService.swift */; };
 		B8F2A1F02C21FC6600897E28 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1E82C21FC6600897E28 /* NetworkError.swift */; };
@@ -60,6 +61,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B88D209F2C2221440021B92F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B88D20A02C2227ED0021B92F /* MessagesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesAPI.swift; sourceTree = "<group>"; };
+		B88D20A22C222FAD0021B92F /* EmailValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationTests.swift; sourceTree = "<group>"; };
 		B8DDAF082C220CCC00898B26 /* MessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewModel.swift; sourceTree = "<group>"; };
 		B8F2A1AD2C21F4D300897E28 /* MessageCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F2A1B02C21F4D300897E28 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
@@ -67,7 +71,6 @@
 		B8F2A1B42C21F4D400897E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8F2A1B72C21F4D400897E28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B8F2A1BD2C21F4D500897E28 /* MessageCenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageCenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8F2A1E22C21FC6600897E28 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		B8F2A1E42C21FC6600897E28 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B8F2A1E62C21FC6600897E28 /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
 		B8F2A1E72C21FC6600897E28 /* MockHTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHTTPService.swift; sourceTree = "<group>"; };
@@ -126,6 +129,7 @@
 		B8F2A1A42C21F4D300897E28 = {
 			isa = PBXGroup;
 			children = (
+				B88D209F2C2221440021B92F /* README.md */,
 				B8F2A1AF2C21F4D300897E28 /* MessageCenter */,
 				B8F2A1C02C21F4D500897E28 /* MessageCenterTests */,
 				B8F2A1AE2C21F4D300897E28 /* Products */,
@@ -168,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				B8F2A2312C2201BB00897E28 /* NetworkTests.swift */,
+				B88D20A22C222FAD0021B92F /* EmailValidationTests.swift */,
 			);
 			path = MessageCenterTests;
 			sourceTree = "<group>";
@@ -228,7 +233,7 @@
 		B8F2A1E32C21FC6600897E28 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				B8F2A1E22C21FC6600897E28 /* APIService.swift */,
+				B88D20A02C2227ED0021B92F /* MessagesAPI.swift */,
 			);
 			name = API;
 			path = MessageCenter/Services/API;
@@ -246,9 +251,9 @@
 		B8F2A1EC2C21FC6600897E28 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B8F2A1E92C21FC6600897E28 /* NetworkFactory.swift */,
 				B8F2A1E62C21FC6600897E28 /* HTTPService.swift */,
 				B8F2A1E72C21FC6600897E28 /* MockHTTPService.swift */,
-				B8F2A1E92C21FC6600897E28 /* NetworkFactory.swift */,
 				B8F2A1EA2C21FC6600897E28 /* URLBuilder.swift */,
 				B8F2A1EB2C21FC6600897E28 /* URLPath.swift */,
 				B8F2A1E82C21FC6600897E28 /* NetworkError.swift */,
@@ -464,7 +469,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8F2A1B32C21F4D300897E28 /* HomeView.swift in Sources */,
-				B8F2A1ED2C21FC6600897E28 /* APIService.swift in Sources */,
 				B8F2A1EE2C21FC6600897E28 /* Logger.swift in Sources */,
 				B8DDAF092C220CCC00898B26 /* MessagesViewModel.swift in Sources */,
 				B8F2A1EF2C21FC6600897E28 /* MockHTTPService.swift in Sources */,
@@ -477,6 +481,7 @@
 				B8F2A2302C21FF7F00897E28 /* String+Extension.swift in Sources */,
 				B8F2A1FA2C21FD5900897E28 /* Message.swift in Sources */,
 				B8F2A1F22C21FC6600897E28 /* NetworkFactory.swift in Sources */,
+				B88D20A12C2227ED0021B92F /* MessagesAPI.swift in Sources */,
 				B8F2A1F32C21FC6600897E28 /* HTTPService.swift in Sources */,
 				B8F2A1F42C21FC6600897E28 /* URLPath.swift in Sources */,
 				B8F2A1B12C21F4D300897E28 /* MainApp.swift in Sources */,
@@ -488,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8F2A2322C2201BB00897E28 /* NetworkTests.swift in Sources */,
+				B88D20A32C222FAD0021B92F /* EmailValidationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,8 +7,16 @@
 
 enum URLPath: String {
     case messages = "/messages/users"
+    
+    static func getPath(for path: URLPath) -> String {
+        return path.rawValue
+    }
+    
+    static func getMessagesPath(for emailId: String) -> String {
+        return URLPath.messages.rawValue + "/" + emailId
+    }
 }
 
 enum MockPath: String {
-    case photos = "Messages.json"
+    case messages = "Messages1.json"
 }

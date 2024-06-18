@@ -25,13 +25,12 @@ struct URLBuilder {
         return components.url
     }
 
-    func getURLRequest(for path: String,
-                       queryItems: [URLQueryItem],
-                       headers: [String: String]) throws -> URLRequest? {
+    func makeURLRequest(forPath path: String,
+                        queryItems: [URLQueryItem] = [],
+                        headers: [String: String] = [:]) throws -> URLRequest? {
         
         guard let url = getURL(for: path, queryItems: queryItems) else {
-            Logger.log(tag: .networkModule, message: "URL could not be obtained")
-            throw NetworkError.incorrectURL
+            throw NetworkError.incorrectURL(#function)
         }
         
         var urlRequest = URLRequest(url: url)
