@@ -12,9 +12,10 @@ struct HomeView: View {
     @FocusState var emailTextFieldFocusState: Bool
     @State var emailIdString = ""
     @State var showEmailAlert = false
+    @State private var path = NavigationPath()
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             VStack {
                 Spacer()
                     .frame(height: 50)
@@ -36,7 +37,9 @@ struct HomeView: View {
                     .padding(.bottom, 35)
                 
                 ThemedButton(buttonText: "GetMessages") {
-                    if !emailIdString.isValidEmailId() {
+                    if emailIdString.isValidEmailId() {
+                        path.append(emailIdString)
+                    } else {
                         showEmailAlert = true
                     }
                 }
@@ -48,6 +51,9 @@ struct HomeView: View {
                 }
                 
                 Spacer()
+            }
+            .navigationDestination(for: String.self) { emailString in
+                MessagesView(emailString: emailString)
             }
         }
         .onTapGesture {

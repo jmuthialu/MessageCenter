@@ -16,6 +16,8 @@
 		B8A2A99F2C226BC3004E2F85 /* UnderLinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A99E2C226BC3004E2F85 /* UnderLinedTextField.swift */; };
 		B8A2A9A12C22767F004E2F85 /* ThemedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A9A02C22767F004E2F85 /* ThemedButton.swift */; };
 		B8A2A9A32C2278B9004E2F85 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A9A22C2278B9004E2F85 /* ColorPalette.swift */; };
+		B8A2A9A52C2282DE004E2F85 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A9A42C2282DE004E2F85 /* MessagesView.swift */; };
+		B8A2A9A92C228509004E2F85 /* MessageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A9A82C228509004E2F85 /* MessageRowView.swift */; };
 		B8DDAF092C220CCC00898B26 /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DDAF082C220CCC00898B26 /* MessagesViewModel.swift */; };
 		B8F2A1B12C21F4D300897E28 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1B02C21F4D300897E28 /* MainApp.swift */; };
 		B8F2A1B32C21F4D300897E28 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1B22C21F4D300897E28 /* HomeView.swift */; };
@@ -76,6 +78,8 @@
 		B8A2A99E2C226BC3004E2F85 /* UnderLinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLinedTextField.swift; sourceTree = "<group>"; };
 		B8A2A9A02C22767F004E2F85 /* ThemedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedButton.swift; sourceTree = "<group>"; };
 		B8A2A9A22C2278B9004E2F85 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		B8A2A9A42C2282DE004E2F85 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
+		B8A2A9A82C228509004E2F85 /* MessageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowView.swift; sourceTree = "<group>"; };
 		B8DDAF082C220CCC00898B26 /* MessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewModel.swift; sourceTree = "<group>"; };
 		B8F2A1AD2C21F4D300897E28 /* MessageCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F2A1B02C21F4D300897E28 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
@@ -139,7 +143,9 @@
 		B8A2A95C2C224519004E2F85 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				B8A2A9A42C2282DE004E2F85 /* MessagesView.swift */,
 				B8DDAF082C220CCC00898B26 /* MessagesViewModel.swift */,
+				B8A2A9A82C228509004E2F85 /* MessageRowView.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -191,7 +197,7 @@
 				B8F2A1DE2C21FBF200897E28 /* Services */,
 				B8F2A1DF2C21FBF900897E28 /* Models */,
 				B8F2A22B2C21FF7F00897E28 /* Extensions */,
-				B8F2A1FD2C21FDFD00897E28 /* Fonts */,
+				B8F2A1FD2C21FDFD00897E28 /* CustomFonts */,
 				B8F2A1E02C21FBFE00897E28 /* Mocks */,
 				B8F2A1DC2C21FB9800897E28 /* SupportFiles */,
 			);
@@ -309,12 +315,12 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		B8F2A1FD2C21FDFD00897E28 /* Fonts */ = {
+		B8F2A1FD2C21FDFD00897E28 /* CustomFonts */ = {
 			isa = PBXGroup;
 			children = (
 				B8F2A2112C21FE6900897E28 /* Poppins */,
 			);
-			path = Fonts;
+			path = CustomFonts;
 			sourceTree = "<group>";
 		};
 		B8F2A2112C21FE6900897E28 /* Poppins */ = {
@@ -509,6 +515,7 @@
 				B88D20A52C2232150021B92F /* BaseAPI.swift in Sources */,
 				B8F2A1EF2C21FC6600897E28 /* MockHTTPService.swift in Sources */,
 				B8A2A9A12C22767F004E2F85 /* ThemedButton.swift in Sources */,
+				B8A2A9A92C228509004E2F85 /* MessageRowView.swift in Sources */,
 				B8F2A1F02C21FC6600897E28 /* NetworkError.swift in Sources */,
 				B8F2A1F12C21FC6600897E28 /* URLBuilder.swift in Sources */,
 				B8F2A22C2C21FF7F00897E28 /* Date+Extension.swift in Sources */,
@@ -519,6 +526,7 @@
 				B8F2A1F22C21FC6600897E28 /* NetworkFactory.swift in Sources */,
 				B88D20A12C2227ED0021B92F /* MessagesAPI.swift in Sources */,
 				B8A2A99F2C226BC3004E2F85 /* UnderLinedTextField.swift in Sources */,
+				B8A2A9A52C2282DE004E2F85 /* MessagesView.swift in Sources */,
 				B8A2A9602C224856004E2F85 /* FontPalette.swift in Sources */,
 				B8F2A1F32C21FC6600897E28 /* HTTPService.swift in Sources */,
 				B8F2A1B12C21F4D300897E28 /* MainApp.swift in Sources */,

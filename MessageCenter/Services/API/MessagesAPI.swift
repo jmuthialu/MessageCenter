@@ -14,11 +14,13 @@ class MessagesAPI: BaseAPI {
         static let mockFile = "Messages.json"
     }
     
-    func getMessages(forEmailId emailId: String) async throws -> [Message]? {
+    func getSortedMessages(forEmailId emailId: String) async throws -> [Message]? {
         guard let urlRequest = try buildURLRequest(forEmailId: emailId) else {
             throw NetworkError.incorrectURL(#function)
         }
-        return try await networkService.getData(urlRequest: urlRequest)
+        
+        let messages: [Message]? = try await networkService.getData(urlRequest: urlRequest)
+        return messages?.sorted { $0.date! > $1.date! }
     }
     
     private func buildURLRequest(forEmailId emailId: String) throws -> URLRequest? {

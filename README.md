@@ -6,3 +6,8 @@ Show a list of messages for a given user
 - Font Palette
 - Localization
 - Custom TextField component with clear button
+
+
+mtaylor@gmail.com
+cshort@gmail.com
+oduke@gmail.com

@@ -15,32 +15,46 @@ class MessagesViewModel: ObservableObject {
 
     @Published var messages = [Message]()
     @Published var showProgressView = true
+    @Published var errorMessage = ""
 
     init(messagesAPI: MessagesAPI) {
         self.messagesAPI = messagesAPI
     }
 
-    @discardableResult
     @MainActor
+    @discardableResult
     func getMessages(forEmailID emailId: String) async -> [Message] {
         do {
-            let messageArray: [Message] = try await messagesAPI.getMessages(forEmailId: emailId) ?? []
+            errorMessage = ""
+            let sortedMessages: [Message] = try await messagesAPI.getSortedMessages(forEmailId: emailId) ?? []
             
-            print("messageArray: \(messageArray)")
-            messages = messageArray.sorted { $0.date! > $1.date! }
+            Logger.log(tag: .messagesView, message: "sortedMessages: \(sortedMessages)")
+            messages = sortedMessages
+            processError(messages: messages, error: nil)
         } catch {
-            if let error = error as? NetworkError {
-                Logger.log(tag: .messagesView, 
-                           logType: .error,
-                           message: "\(#function): \(error.description)")
-            } else {
-                Logger.log(tag: .messagesView, 
-                           logType: .error,
-                           message: "\(#function): \(error)")
-            }
-
+            messages = []
+            processError(messages: messages, error: error)
         }
         showProgressView = false
         return messages
+    }
+    
+    func processError(messages: [Message]?, error: Error?) {
+        if let error = error {
+            if let networkError = error as? NetworkError {
+                Logger.log(tag: .messagesView,
+                           logType: .error,
+                           message: "\(#function): \(networkError.description)")
+            } else {
+                Logger.log(tag: .messagesView,
+                           logType: .error,
+                           message: "\(#function): \(error)")
+            }
+            errorMessage = "Something went wrong. Please try again."
+        } else if let messages = messages {
+            if messages.isEmpty { errorMessage = "No messages found at this time." }
+        } else {
+            errorMessage = "No messages found at this time."
+        }
     }
 }
