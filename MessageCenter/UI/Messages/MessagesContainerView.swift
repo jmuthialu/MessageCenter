@@ -10,7 +10,7 @@ import SwiftUI
 struct MessagesContainerView: View {
     
     @ObservedObject var viewModel = MessagesViewModel(
-        messagesAPI: MessagesAPI(forType: .mock)
+        messagesAPI: MessagesAPI(forType: .http)
     )
     let emailString: String
     
