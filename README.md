@@ -16,6 +16,9 @@ Shows messages for a give user (emailId)
 ## Demo Video
 
 
+https://github.com/jmuthialu/MessageCenter/assets/10758530/73b8d3d3-74e0-4d10-92e4-ab13f1f28dc6
+
+
 ## Folder Structure
 
 ![Message Center Folder Structure](Media/FolderStructure.png)
