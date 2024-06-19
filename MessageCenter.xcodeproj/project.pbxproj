@@ -12,6 +12,8 @@
 		B88D20A52C2232150021B92F /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D20A42C2232150021B92F /* BaseAPI.swift */; };
 		B8A2A9602C224856004E2F85 /* FontPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A95F2C224856004E2F85 /* FontPalette.swift */; };
 		B8A2A9622C225009004E2F85 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B8A2A9612C225009004E2F85 /* Localizable.xcstrings */; };
+		B8A2A99B2C226466004E2F85 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A99A2C226466004E2F85 /* Color+Extension.swift */; };
+		B8A2A99F2C226BC3004E2F85 /* UnderLinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A99E2C226BC3004E2F85 /* UnderLinedTextField.swift */; };
 		B8DDAF092C220CCC00898B26 /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DDAF082C220CCC00898B26 /* MessagesViewModel.swift */; };
 		B8F2A1B12C21F4D300897E28 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1B02C21F4D300897E28 /* MainApp.swift */; };
 		B8F2A1B32C21F4D300897E28 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1B22C21F4D300897E28 /* HomeView.swift */; };
@@ -68,6 +70,8 @@
 		B88D20A42C2232150021B92F /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		B8A2A95F2C224856004E2F85 /* FontPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPalette.swift; sourceTree = "<group>"; };
 		B8A2A9612C225009004E2F85 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		B8A2A99A2C226466004E2F85 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		B8A2A99E2C226BC3004E2F85 /* UnderLinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLinedTextField.swift; sourceTree = "<group>"; };
 		B8DDAF082C220CCC00898B26 /* MessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewModel.swift; sourceTree = "<group>"; };
 		B8F2A1AD2C21F4D300897E28 /* MessageCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F2A1B02C21F4D300897E28 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
@@ -136,6 +140,23 @@
 			path = Messages;
 			sourceTree = "<group>";
 		};
+		B8A2A99C2C226B7F004E2F85 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B8A2A99E2C226BC3004E2F85 /* UnderLinedTextField.swift */,
+				B8A2A95F2C224856004E2F85 /* FontPalette.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B8A2A99D2C226B87004E2F85 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B8F2A1E42C21FC6600897E28 /* Logger.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		B8F2A1A42C21F4D300897E28 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +181,7 @@
 			children = (
 				B8F2A1DD2C21FBEA00897E28 /* AppStart */,
 				B8F2A1E12C21FC1200897E28 /* UI */,
+				B8F2A1E52C21FC6600897E28 /* Components */,
 				B8F2A1DE2C21FBF200897E28 /* Services */,
 				B8F2A1DF2C21FBF900897E28 /* Models */,
 				B8F2A22B2C21FF7F00897E28 /* Extensions */,
@@ -209,7 +231,6 @@
 		B8F2A1DE2C21FBF200897E28 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B8F2A1E52C21FC6600897E28 /* Components */,
 				B8F2A1E32C21FC6600897E28 /* API */,
 				B8F2A1EC2C21FC6600897E28 /* Network */,
 			);
@@ -254,11 +275,11 @@
 		B8F2A1E52C21FC6600897E28 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				B8A2A95F2C224856004E2F85 /* FontPalette.swift */,
-				B8F2A1E42C21FC6600897E28 /* Logger.swift */,
+				B8A2A99C2C226B7F004E2F85 /* UI */,
+				B8A2A99D2C226B87004E2F85 /* Service */,
 			);
 			name = Components;
-			path = MessageCenter/Services/Components;
+			path = MessageCenter/Components;
 			sourceTree = SOURCE_ROOT;
 		};
 		B8F2A1EC2C21FC6600897E28 /* Network */ = {
@@ -323,6 +344,7 @@
 				B8F2A2282C21FF7F00897E28 /* Formatter+Extension.swift */,
 				B8F2A2292C21FF7F00897E28 /* JSONDecoder+Extension.swift */,
 				B8F2A22A2C21FF7F00897E28 /* String+Extension.swift */,
+				B8A2A99A2C226466004E2F85 /* Color+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -474,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8F2A1B32C21F4D300897E28 /* HomeView.swift in Sources */,
+				B8A2A99B2C226466004E2F85 /* Color+Extension.swift in Sources */,
 				B8F2A1EE2C21FC6600897E28 /* Logger.swift in Sources */,
 				B8DDAF092C220CCC00898B26 /* MessagesViewModel.swift in Sources */,
 				B88D20A52C2232150021B92F /* BaseAPI.swift in Sources */,
@@ -487,6 +510,7 @@
 				B8F2A1FA2C21FD5900897E28 /* Message.swift in Sources */,
 				B8F2A1F22C21FC6600897E28 /* NetworkFactory.swift in Sources */,
 				B88D20A12C2227ED0021B92F /* MessagesAPI.swift in Sources */,
+				B8A2A99F2C226BC3004E2F85 /* UnderLinedTextField.swift in Sources */,
 				B8A2A9602C224856004E2F85 /* FontPalette.swift in Sources */,
 				B8F2A1F32C21FC6600897E28 /* HTTPService.swift in Sources */,
 				B8F2A1B12C21F4D300897E28 /* MainApp.swift in Sources */,
@@ -653,7 +677,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -689,7 +713,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

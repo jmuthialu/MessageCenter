@@ -1,7 +1,17 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "enterYourEmail" : {
+    "EnterYourEmail" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter Your Email"
+          }
+        }
+      }
+    },
+    "enterYourEmailToSearch" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -14,6 +24,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Introduce tu correo electrónico para buscar tus mensajes"
+          }
+        }
+      }
+    },
+    "Error" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error"
+          }
+        }
+      }
+    },
+    "GetMessages" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get Messages"
           }
         }
       }
@@ -31,6 +61,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Centro de mensajes"
+          }
+        }
+      }
+    },
+    "PleaseEnterValidEmail" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please Enter a Valid Email"
           }
         }
       }
