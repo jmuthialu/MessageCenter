@@ -12,20 +12,17 @@ struct MessagesView: View {
     let messages: [Message]
     
     var body: some View {
-        GeometryReader { geometry in
-            VStack {
-                Text("messageCenter")
-                    .font(FontPalette.mediumBold.font)
-                    .padding(.bottom, 20)
-                
+        GeometryReader { _ in
+            VStack(alignment: .leading) {
                 List {
                     ForEach(messages, id: \.id) { message in
-                        MessageRowView(message: message, width: geometry.size.width * 0.5)
+                        MessageRowView(message: message) 
                     }
                 }
                 .listStyle(.plain)
-                .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
+                
             }
+            .padding(EdgeInsets(top: 1, leading: 15, bottom: 10, trailing: 15))
         }
     }
 }
@@ -34,7 +31,7 @@ struct MessagesView: View {
     let messages: [Message] = [
         Message(name: "Test1", 
                 date: Date(),
-                message: "Hello, Tes1!"),
+                message: "The item you requested is now in stock. Please call or text customer service at 1-800-766-6786 to request shipment. Messaging and data charges may apply."),
         Message(name: "Test2", 
                 date: Date(),
                 message: "Hello, Test2!")

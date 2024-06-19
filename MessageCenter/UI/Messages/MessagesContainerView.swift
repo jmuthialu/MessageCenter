@@ -15,22 +15,23 @@ struct MessagesContainerView: View {
     let emailString: String
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
+            MessageCenterHeader()
+
+            Spacer()
+            
             if viewModel.errorMessage.isEmpty {
                 MessagesView(messages: viewModel.messages)
             } else {
-                VStack {
-                    Text(viewModel.errorMessage)
-                        .font(FontPalette.mediumBold.font)
-                        .padding()
-                    
-                    ThemedButton(buttonText: "Try Again") {
-                        Task {
-                            await viewModel.getMessages(forEmailID: emailString)
-                        }
+                TryAgainView(errorMessage: viewModel.errorMessage) {
+                    Task {
+                        await viewModel.getMessages(forEmailID: emailString)
                     }
                 }
+                .frame(maxWidth: .infinity, alignment: .center)
             }
+            
+            Spacer()
         }
         .task {
             await viewModel.getMessages(forEmailID: emailString)

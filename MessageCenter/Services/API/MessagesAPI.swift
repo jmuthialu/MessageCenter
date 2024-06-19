@@ -19,7 +19,7 @@ class MessagesAPI: BaseAPI {
             throw NetworkError.incorrectURL(#function)
         }
         
-        let messages: [Message]? = try await networkService.getData(urlRequest: urlRequest)
+        let messages: [Message]? = try await getData(urlRequest: urlRequest)
         return messages?.sorted { $0.date! > $1.date! }
     }
     

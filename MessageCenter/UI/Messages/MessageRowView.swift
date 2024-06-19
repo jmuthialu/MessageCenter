@@ -9,15 +9,18 @@ import SwiftUI
 
 struct MessageRowView: View {
     let message: Message
-    let width: CGFloat
     
     var body: some View {
         HStack {
             Text(message.message ?? "")
-                .frame(width: width, alignment: .leading)
+                .font(FontPalette.smallRegular.font)
+            
+            Spacer()
             
             let dateString = message.date?.toShortString()
             Text(dateString ?? "")
+                .font(FontPalette.smallRegular.font)
+                .frame(width: 60)
         }
     }
 }
@@ -25,6 +28,6 @@ struct MessageRowView: View {
 #Preview {
     let message = Message(name: "Test",
                           date: Date(),
-                          message: "Test Message")
-    MessageRowView(message: message, width: 300)
+                          message: "The item you requested is now in stock. Please call or text customer service at 1-800-766-6786 to request shipment. Messaging and data charges may apply.")
+    MessageRowView(message: message)
 }

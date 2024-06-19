@@ -17,5 +17,9 @@ class BaseAPI {
         networkService = NetworkFactory.getService(forType: serviceType,
                                                    urlSession: urlSession)
     }
+    
+    func getData<T: Decodable>(urlRequest: URLRequest) async throws -> T? {
+        return try await networkService.getData(urlRequest: urlRequest)
+    }
 
 }

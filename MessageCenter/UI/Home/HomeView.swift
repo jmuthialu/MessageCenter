@@ -56,6 +56,7 @@ struct HomeView: View {
             }
             .navigationDestination(for: String.self) { emailString in
                 MessagesContainerView(emailString: emailString)
+                    .toolbarRole(.editor)
             }
         }
         .onTapGesture {
