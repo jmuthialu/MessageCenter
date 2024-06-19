@@ -18,6 +18,7 @@
 		B8A2A9A32C2278B9004E2F85 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A9A22C2278B9004E2F85 /* ColorPalette.swift */; };
 		B8A2A9A52C2282DE004E2F85 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A9A42C2282DE004E2F85 /* MessagesView.swift */; };
 		B8A2A9A92C228509004E2F85 /* MessageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A9A82C228509004E2F85 /* MessageRowView.swift */; };
+		B8A2A9AB2C229289004E2F85 /* MessagesContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A9AA2C229289004E2F85 /* MessagesContainerView.swift */; };
 		B8DDAF092C220CCC00898B26 /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DDAF082C220CCC00898B26 /* MessagesViewModel.swift */; };
 		B8F2A1B12C21F4D300897E28 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1B02C21F4D300897E28 /* MainApp.swift */; };
 		B8F2A1B32C21F4D300897E28 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A1B22C21F4D300897E28 /* HomeView.swift */; };
@@ -80,6 +81,7 @@
 		B8A2A9A22C2278B9004E2F85 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		B8A2A9A42C2282DE004E2F85 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		B8A2A9A82C228509004E2F85 /* MessageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowView.swift; sourceTree = "<group>"; };
+		B8A2A9AA2C229289004E2F85 /* MessagesContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesContainerView.swift; sourceTree = "<group>"; };
 		B8DDAF082C220CCC00898B26 /* MessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewModel.swift; sourceTree = "<group>"; };
 		B8F2A1AD2C21F4D300897E28 /* MessageCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F2A1B02C21F4D300897E28 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		B8A2A95C2C224519004E2F85 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				B8A2A9AA2C229289004E2F85 /* MessagesContainerView.swift */,
 				B8A2A9A42C2282DE004E2F85 /* MessagesView.swift */,
 				B8DDAF082C220CCC00898B26 /* MessagesViewModel.swift */,
 				B8A2A9A82C228509004E2F85 /* MessageRowView.swift */,
@@ -527,6 +530,7 @@
 				B88D20A12C2227ED0021B92F /* MessagesAPI.swift in Sources */,
 				B8A2A99F2C226BC3004E2F85 /* UnderLinedTextField.swift in Sources */,
 				B8A2A9A52C2282DE004E2F85 /* MessagesView.swift in Sources */,
+				B8A2A9AB2C229289004E2F85 /* MessagesContainerView.swift in Sources */,
 				B8A2A9602C224856004E2F85 /* FontPalette.swift in Sources */,
 				B8F2A1F32C21FC6600897E28 /* HTTPService.swift in Sources */,
 				B8F2A1B12C21F4D300897E28 /* MainApp.swift in Sources */,

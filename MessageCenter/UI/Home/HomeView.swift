@@ -37,6 +37,8 @@ struct HomeView: View {
                     .padding(.bottom, 35)
                 
                 ThemedButton(buttonText: "GetMessages") {
+                    let trimmedEmailString = emailIdString.trimmingCharacters(in: .whitespacesAndNewlines)
+                    emailIdString = trimmedEmailString
                     if emailIdString.isValidEmailId() {
                         path.append(emailIdString)
                     } else {
@@ -53,7 +55,7 @@ struct HomeView: View {
                 Spacer()
             }
             .navigationDestination(for: String.self) { emailString in
-                MessagesView(emailString: emailString)
+                MessagesContainerView(emailString: emailString)
             }
         }
         .onTapGesture {
