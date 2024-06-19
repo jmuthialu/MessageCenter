@@ -5,3 +5,4 @@ Show a list of messages for a given user
 - ID
 - Font Palette
 - Localization
+- Custom TextField component with clear button

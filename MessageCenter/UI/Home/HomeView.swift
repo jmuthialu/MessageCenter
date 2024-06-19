@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+
     @FocusState var emailTextFieldFocusState: Bool
     @State var emailIdString = ""
     @State var showEmailAlert = false
@@ -33,14 +33,13 @@ struct HomeView: View {
                 UnderLinedTextField(emailIdString: $emailIdString)
                     .focused($emailTextFieldFocusState)
                     .padding(.horizontal, 30)
+                    .padding(.bottom, 35)
                 
-                Button("GetMessages") {
+                ThemedButton(buttonText: "GetMessages") {
                     if !emailIdString.isValidEmailId() {
                         showEmailAlert = true
                     }
                 }
-                .padding(.top, 30)
-                .foregroundColor(Color(hex: "#004FB5"))
                 .alert(isPresented: $showEmailAlert) {
                     Alert(
                         title: Text("Error"),
