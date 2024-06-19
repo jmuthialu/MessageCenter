@@ -20,7 +20,7 @@ struct MessageRowView: View {
             let dateString = message.date?.toShortString()
             Text(dateString ?? "")
                 .font(FontPalette.smallRegular.font)
-                .frame(width: 60)
+                .frame(width: 85)
         }
     }
 }

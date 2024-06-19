@@ -10,7 +10,8 @@ import SwiftUI
 struct HomeView: View {
 
     @FocusState var emailTextFieldFocusState: Bool
-    @State var emailIdString = ""
+    
+    @AppStorage("userEmailId") var emailIdString: String = ""
     @State var showEmailAlert = false
     @State private var path = NavigationPath()
     

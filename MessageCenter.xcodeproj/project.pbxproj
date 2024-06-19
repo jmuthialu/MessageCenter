@@ -162,10 +162,10 @@
 			children = (
 				B8A2A99E2C226BC3004E2F85 /* UnderLinedTextField.swift */,
 				B8A2A9A02C22767F004E2F85 /* ThemedButton.swift */,
-				B8A2A95F2C224856004E2F85 /* FontPalette.swift */,
-				B8A2A9A22C2278B9004E2F85 /* ColorPalette.swift */,
 				B8900A472C23288B00811BCB /* MessageCenterHeader.swift */,
 				B8900A492C23295300811BCB /* TryAgainView.swift */,
+				B8A2A95F2C224856004E2F85 /* FontPalette.swift */,
+				B8A2A9A22C2278B9004E2F85 /* ColorPalette.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -206,7 +206,6 @@
 				B8F2A1DE2C21FBF200897E28 /* Services */,
 				B8F2A1DF2C21FBF900897E28 /* Models */,
 				B8F2A22B2C21FF7F00897E28 /* Extensions */,
-				B8F2A1FD2C21FDFD00897E28 /* CustomFonts */,
 				B8F2A1E02C21FBFE00897E28 /* Mocks */,
 				B8F2A1DC2C21FB9800897E28 /* SupportFiles */,
 			);
@@ -233,6 +232,7 @@
 		B8F2A1DC2C21FB9800897E28 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				B8F2A1FD2C21FDFD00897E28 /* CustomFonts */,
 				B8F2A2252C21FE7D00897E28 /* Info.plist */,
 				B8F2A1B42C21F4D400897E28 /* Assets.xcassets */,
 				B8F2A1B62C21F4D400897E28 /* Preview Content */,

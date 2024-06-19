@@ -12,7 +12,7 @@ extension Date {
     func toShortString() -> String {
         let formatter = DateFormatter()
         formatter.locale = Locale.current
-        formatter.dateStyle = .short
+        formatter.dateFormat = "M/d/yyyy"
         return formatter.string(from: self)
     }
 }
