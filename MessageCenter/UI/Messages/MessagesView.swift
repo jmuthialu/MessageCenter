@@ -20,7 +20,6 @@ struct MessagesView: View {
                     }
                 }
                 .listStyle(.plain)
-                
             }
             .padding(EdgeInsets(top: 1, leading: 15, bottom: 10, trailing: 15))
         }

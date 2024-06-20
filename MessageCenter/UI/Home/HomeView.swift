@@ -12,10 +12,12 @@ struct HomeView: View {
     @FocusState var emailTextFieldFocusState: Bool
     
     @AppStorage("userEmailId") var emailIdString: String = ""
+    
     @State var showEmailAlert = false
     @State private var path = NavigationPath()
     
     var body: some View {
+        
         NavigationStack(path: $path) {
             VStack {
                 Spacer()
@@ -55,8 +57,9 @@ struct HomeView: View {
                 
                 Spacer()
             }
+            // Make entire VStack tappable
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .contentShape(Rectangle()) // Make the entire VStack tappable
+            .contentShape(Rectangle())
             .onTapGesture {
                 emailTextFieldFocusState = false
             }
