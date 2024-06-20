@@ -8,6 +8,12 @@
             "state" : "translated",
             "value" : "Enter Your Email"
           }
+        },
+        "es-MX" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduce tu correo electrónico"
+          }
         }
       }
     },
@@ -35,16 +41,27 @@
             "state" : "translated",
             "value" : "Error"
           }
+        },
+        "es-MX" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error"
+          }
         }
       }
     },
-    "GetMessages" : {
-      "extractionState" : "stale",
+    "Get Messages" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Get Messages"
+          }
+        },
+        "es-MX" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recibir mensajes"
           }
         }
       }
@@ -72,6 +89,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Please Enter a Valid Email"
+          }
+        },
+        "es-MX" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por favor introduzca una dirección de correo electrónico válida"
           }
         }
       }

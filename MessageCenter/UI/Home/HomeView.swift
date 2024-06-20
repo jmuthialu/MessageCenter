@@ -39,7 +39,7 @@ struct HomeView: View {
                     .padding(.horizontal, 30)
                     .padding(.bottom, 35)
                 
-                ThemedButton(buttonText: "GetMessages") {
+                ThemedButton(buttonText: String(localized: "Get Messages") ) {
                     let trimmedEmailString = emailIdString.trimmingCharacters(in: .whitespacesAndNewlines)
                     emailIdString = trimmedEmailString
                     if emailIdString.isValidEmailId() {
