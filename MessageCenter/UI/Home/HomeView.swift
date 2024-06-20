@@ -55,13 +55,15 @@ struct HomeView: View {
                 
                 Spacer()
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .contentShape(Rectangle()) // Make the entire VStack tappable
+            .onTapGesture {
+                emailTextFieldFocusState = false
+            }
             .navigationDestination(for: String.self) { emailString in
                 MessagesContainerView(emailString: emailString)
                     .toolbarRole(.editor)
             }
-        }
-        .onTapGesture {
-            emailTextFieldFocusState = false
         }
     }
 }
