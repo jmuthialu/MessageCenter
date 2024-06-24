@@ -28,7 +28,7 @@ class MessagesViewModel: ObservableObject {
             errorMessage = ""
             let sortedMessages: [Message] = try await messagesAPI.getSortedMessages(forEmailId: emailId) ?? []
             
-            Logger.log(tag: .messagesView, message: "sortedMessages: \(sortedMessages)")
+            Logger.log(tag: .messagesModule, message: "sortedMessages: \(sortedMessages)")
             messages = sortedMessages
             processError(messages: messages, error: nil)
         } catch {
@@ -42,11 +42,11 @@ class MessagesViewModel: ObservableObject {
     func processError(messages: [Message]?, error: Error?) {
         if let error = error {
             if let networkError = error as? NetworkError {
-                Logger.log(tag: .messagesView,
+                Logger.log(tag: .messagesModule,
                            logType: .error,
                            message: "\(#function): \(networkError.description)")
             } else {
-                Logger.log(tag: .messagesView,
+                Logger.log(tag: .messagesModule,
                            logType: .error,
                            message: "\(#function): \(error)")
             }

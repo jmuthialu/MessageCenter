@@ -11,7 +11,7 @@ struct Logger {
     
     enum Tag: String {
         case homeView
-        case messagesView
+        case messagesModule
         case networkModule
     }
     

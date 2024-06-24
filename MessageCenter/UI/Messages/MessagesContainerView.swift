@@ -9,8 +9,8 @@ import SwiftUI
 
 struct MessagesContainerView: View {
     
-    @ObservedObject var viewModel = MessagesViewModel(
-        messagesAPI: MessagesAPI(forType: .mock)
+    @StateObject var viewModel = MessagesViewModel(
+        messagesAPI: MessagesAPI(forType: .http)
     )
     let emailString: String
     
@@ -50,5 +50,5 @@ struct MessagesContainerView: View {
 
 #Preview {
     let viewModel = MessagesViewModel(messagesAPI: MessagesAPI(forType: .http))
-    MessagesContainerView(viewModel: viewModel, emailString: "mtaylor@gmail.com")
+    return MessagesContainerView(viewModel: viewModel, emailString: "mtaylor@gmail.com")
 }

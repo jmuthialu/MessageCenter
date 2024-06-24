@@ -29,5 +29,5 @@ struct MessageRowView: View {
     let message = Message(name: "Test",
                           date: Date(),
                           message: "The item you requested is now in stock. Please call or text customer service at 1-800-766-6786 to request shipment. Messaging and data charges may apply.")
-    MessageRowView(message: message)
+    return MessageRowView(message: message)
 }
