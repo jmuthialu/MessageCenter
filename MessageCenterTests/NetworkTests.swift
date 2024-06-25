@@ -16,7 +16,7 @@ final class NetworkTests: XCTestCase {
         
         if let messages = try await messagesAPI.getSortedMessages(forEmailId: emailId),
            messages.count > 0 {
-            XCTAssertEqual(messages.count, 12, "Messages count is not equal")
+            XCTAssertEqual(messages.count, 72, "Messages count is not equal")
             let firstMessage = messages[0]
             XCTAssertEqual(firstMessage.name, "Jay 123")
             XCTAssertEqual(firstMessage.message, "Click to pay your bills online")
