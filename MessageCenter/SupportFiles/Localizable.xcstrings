@@ -50,23 +50,6 @@
         }
       }
     },
-    "Get Messages" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Get Messages"
-          }
-        },
-        "es-MX" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recibir mensajes"
-          }
-        }
-      }
-    },
     "messageCenter" : {
       "extractionState" : "manual",
       "localizations" : {

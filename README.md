@@ -1,12 +1,38 @@
 # Message Center App
 
-Shows messages for a given user's emailId sorted by date in descending order
+Shows messages for a given user's email Id sorted by date in descending order
+
+## Installation
+
+- Install XCode 15.4.
+- Clone this repo or download the source code from github.
+
+```
+$ git clone git@github.com:jmuthialu/MessageCenter.git
+``` 
+
+- Navigate to root folder, "MessageCenter".
+- Double click "MessageCenter.xcodeproj" which will open the project in XCode.
+- Swift package will automatically install SwiftLint dependency the first time the project is launched.
+- If Swift package encounters any issues, clean the project, Cmd+Shift+K and resolve packages by navigating to File -> Packages -> Resolve Package Versions.
+- Build the project, Cmd+B.
+- If build is successful, run the project, Cmd+R.
+
+### Min deployment version
+iOS 16. For testing, make sure you have a device or simulator running on iOS 16 or later.
+Tested on the following devices/Sim:
+- iPhone 15 Plus running on iOS18 (beta).
+- iPhone 11 running on iOS 17.4.
+- (Simulator) iPhone 15 Pro Max running on iOS 17.5.
+- (Simulator) iPhone 13 running on iOS 16.
+
 
 ## Features
 - Email validation and error handling.
 - Persists last entered email ID.
 - Clear button in email Text Field.
 - Handles network errors with retry.
+- Shows error message if there is no network connection and disables "Get Messages" button.
 - Pull to refresh in Messages screen.
 - Integration of SwiftLint.
 - Localization for US-English and Spanish-Mexico.
