@@ -15,10 +15,12 @@ struct TryAgainView: View {
     var body: some View {
         VStack {
             Text(errorMessage)
-                .font(FontPalette.mediumBold.font)
+                .font(FontPalette.mediumRegular.font)
                 .padding()
             
-            ThemedButton(buttonText: "Try Again") {
+            ButtonWithErrorHandler(buttonText: String(localized: StringConstants.tryAgain),
+                                   errorMessage: nil,
+                                   errorIconName: nil) {
                 Task {
                     actionBlock()
                 }

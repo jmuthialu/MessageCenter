@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct MainApp: App {
+    
+    @StateObject var nwConnectivity = NetworkConnectivity()
+    
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .environmentObject(nwConnectivity)
         }
     }
 }

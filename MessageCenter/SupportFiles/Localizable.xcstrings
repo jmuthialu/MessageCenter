@@ -51,6 +51,7 @@
       }
     },
     "Get Messages" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

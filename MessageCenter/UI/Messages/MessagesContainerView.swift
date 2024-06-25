@@ -9,9 +9,7 @@ import SwiftUI
 
 struct MessagesContainerView: View {
     
-    @StateObject var viewModel = MessagesViewModel(
-        messagesAPI: MessagesAPI(forType: .http)
-    )
+    @StateObject var viewModel = MessagesViewModel(messagesAPI: MessagesAPI(forType: .http))
     let emailString: String
     
     var body: some View {

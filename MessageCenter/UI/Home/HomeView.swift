@@ -10,14 +10,27 @@ import SwiftUI
 struct HomeView: View {
 
     @FocusState var emailTextFieldFocusState: Bool
-    
     @AppStorage("userEmailId") var emailIdString: String = ""
+    @EnvironmentObject var nwConnectivity: NetworkConnectivity
     
     @State var showEmailAlert = false
     @State private var path = NavigationPath()
     
+    var errorMessage: String? {
+        if !nwConnectivity.isConnected {
+            return NetworkError.noNetwork.description
+        }
+        return nil
+    }
+    
+    var errorIconName: String? {
+        if !nwConnectivity.isConnected {
+            return NetworkError.noNetwork.iconName
+        }
+        return nil
+    }
+    
     var body: some View {
-        
         NavigationStack(path: $path) {
             VStack {
                 Spacer()
@@ -37,9 +50,11 @@ struct HomeView: View {
                 UnderLinedTextField(emailIdString: $emailIdString)
                     .focused($emailTextFieldFocusState)
                     .padding(.horizontal, 30)
-                    .padding(.bottom, 35)
+                    .padding(.bottom, 25)
                 
-                ThemedButton(buttonText: String(localized: "Get Messages") ) {
+                ButtonWithErrorHandler(buttonText: String(localized: StringConstants.getMessages),
+                                       errorMessage: errorMessage,
+                                       errorIconName: errorIconName) {
                     let trimmedEmailString = emailIdString.trimmingCharacters(in: .whitespacesAndNewlines)
                     emailIdString = trimmedEmailString
                     if emailIdString.isValidEmailId() {

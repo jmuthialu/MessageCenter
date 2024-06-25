@@ -16,7 +16,6 @@
 		B8A2A9622C225009004E2F85 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B8A2A9612C225009004E2F85 /* Localizable.xcstrings */; };
 		B8A2A99B2C226466004E2F85 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A99A2C226466004E2F85 /* Color+Extension.swift */; };
 		B8A2A99F2C226BC3004E2F85 /* UnderLinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A99E2C226BC3004E2F85 /* UnderLinedTextField.swift */; };
-		B8A2A9A12C22767F004E2F85 /* ThemedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A9A02C22767F004E2F85 /* ThemedButton.swift */; };
 		B8A2A9A32C2278B9004E2F85 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A9A22C2278B9004E2F85 /* ColorPalette.swift */; };
 		B8A2A9A52C2282DE004E2F85 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A9A42C2282DE004E2F85 /* MessagesView.swift */; };
 		B8A2A9A92C228509004E2F85 /* MessageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A2A9A82C228509004E2F85 /* MessageRowView.swift */; };
@@ -58,6 +57,9 @@
 		B8F2A22F2C21FF7F00897E28 /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A2292C21FF7F00897E28 /* JSONDecoder+Extension.swift */; };
 		B8F2A2302C21FF7F00897E28 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A22A2C21FF7F00897E28 /* String+Extension.swift */; };
 		B8F2A2322C2201BB00897E28 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2A2312C2201BB00897E28 /* NetworkTests.swift */; };
+		D7C559062C2A3651003B0AD4 /* NetworkConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C559052C2A3651003B0AD4 /* NetworkConnectivity.swift */; };
+		D7C559082C2A51C1003B0AD4 /* ButtonWithErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C559072C2A51C1003B0AD4 /* ButtonWithErrorHandler.swift */; };
+		D7C5590A2C2A5A9A003B0AD4 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C559092C2A5A9A003B0AD4 /* StringConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +83,6 @@
 		B8A2A9612C225009004E2F85 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		B8A2A99A2C226466004E2F85 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		B8A2A99E2C226BC3004E2F85 /* UnderLinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLinedTextField.swift; sourceTree = "<group>"; };
-		B8A2A9A02C22767F004E2F85 /* ThemedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedButton.swift; sourceTree = "<group>"; };
 		B8A2A9A22C2278B9004E2F85 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		B8A2A9A42C2282DE004E2F85 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		B8A2A9A82C228509004E2F85 /* MessageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowView.swift; sourceTree = "<group>"; };
@@ -126,6 +127,9 @@
 		B8F2A2292C21FF7F00897E28 /* JSONDecoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extension.swift"; sourceTree = "<group>"; };
 		B8F2A22A2C21FF7F00897E28 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B8F2A2312C2201BB00897E28 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		D7C559052C2A3651003B0AD4 /* NetworkConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConnectivity.swift; sourceTree = "<group>"; };
+		D7C559072C2A51C1003B0AD4 /* ButtonWithErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithErrorHandler.swift; sourceTree = "<group>"; };
+		D7C559092C2A5A9A003B0AD4 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				B8A2A99E2C226BC3004E2F85 /* UnderLinedTextField.swift */,
-				B8A2A9A02C22767F004E2F85 /* ThemedButton.swift */,
+				D7C559072C2A51C1003B0AD4 /* ButtonWithErrorHandler.swift */,
 				B8900A472C23288B00811BCB /* MessageCenterHeader.swift */,
 				B8900A492C23295300811BCB /* TryAgainView.swift */,
 				B8A2A95F2C224856004E2F85 /* FontPalette.swift */,
@@ -232,6 +236,7 @@
 		B8F2A1DC2C21FB9800897E28 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				D7C559092C2A5A9A003B0AD4 /* StringConstants.swift */,
 				B8F2A1FD2C21FDFD00897E28 /* CustomFonts */,
 				B8F2A2252C21FE7D00897E28 /* Info.plist */,
 				B8F2A1B42C21F4D400897E28 /* Assets.xcassets */,
@@ -310,6 +315,7 @@
 				B8F2A1E62C21FC6600897E28 /* HTTPService.swift */,
 				B8F2A1E72C21FC6600897E28 /* MockHTTPService.swift */,
 				B8F2A1EA2C21FC6600897E28 /* URLBuilder.swift */,
+				D7C559052C2A3651003B0AD4 /* NetworkConnectivity.swift */,
 				B8F2A1E82C21FC6600897E28 /* NetworkError.swift */,
 			);
 			name = Network;
@@ -516,6 +522,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7C559082C2A51C1003B0AD4 /* ButtonWithErrorHandler.swift in Sources */,
 				B8A2A9A32C2278B9004E2F85 /* ColorPalette.swift in Sources */,
 				B8F2A1B32C21F4D300897E28 /* HomeView.swift in Sources */,
 				B8A2A99B2C226466004E2F85 /* Color+Extension.swift in Sources */,
@@ -523,12 +530,13 @@
 				B8DDAF092C220CCC00898B26 /* MessagesViewModel.swift in Sources */,
 				B88D20A52C2232150021B92F /* BaseAPI.swift in Sources */,
 				B8F2A1EF2C21FC6600897E28 /* MockHTTPService.swift in Sources */,
-				B8A2A9A12C22767F004E2F85 /* ThemedButton.swift in Sources */,
+				D7C559062C2A3651003B0AD4 /* NetworkConnectivity.swift in Sources */,
 				B8A2A9A92C228509004E2F85 /* MessageRowView.swift in Sources */,
 				B8F2A1F02C21FC6600897E28 /* NetworkError.swift in Sources */,
 				B8F2A1F12C21FC6600897E28 /* URLBuilder.swift in Sources */,
 				B8F2A22C2C21FF7F00897E28 /* Date+Extension.swift in Sources */,
 				B8F2A22E2C21FF7F00897E28 /* Formatter+Extension.swift in Sources */,
+				D7C5590A2C2A5A9A003B0AD4 /* StringConstants.swift in Sources */,
 				B8F2A22F2C21FF7F00897E28 /* JSONDecoder+Extension.swift in Sources */,
 				B8F2A2302C21FF7F00897E28 /* String+Extension.swift in Sources */,
 				B8900A482C23288B00811BCB /* MessageCenterHeader.swift in Sources */,

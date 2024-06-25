@@ -12,6 +12,7 @@ enum NetworkError: Error, CustomStringConvertible {
     case incorrectURL(String)
     case invalidMockFile(String, String)
     case noHTTPURLResponse(String)
+    case noNetwork
     
     var description: String {
         switch self {
@@ -23,6 +24,18 @@ enum NetworkError: Error, CustomStringConvertible {
             return "Could not load mock file: \(fileName) at: \(functionDetails)"
         case let .noHTTPURLResponse(functionDetails):
             return "No valid HTTPURLResponse at: \(functionDetails)"
+        case .noNetwork:
+            return "No network connection found!"
+        
+        }
+    }
+    
+    var iconName: String {
+        switch self {
+        case .noNetwork:
+            return "network.slash"
+        default:
+            return "network.slash" // replace with a generic error icon name
         }
     }
 }

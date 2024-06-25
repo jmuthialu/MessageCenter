@@ -9,6 +9,10 @@ import Foundation
 
 extension String {
     
+    init(localized: String) {
+        self.init(NSLocalizedString(localized, comment: ""))
+    }
+    
     /**  Source: Stack Overflow https://stackoverflow.com/questions/25471114/how-to-validate-an-e-mail-address-in-swift
      */
     func isValidEmailId() -> Bool {
@@ -19,4 +23,6 @@ extension String {
         let predicate = NSPredicate(format: "SELF MATCHES %@", regEx)
         return predicate.evaluate(with: self)
     }
+    
+    
 }
