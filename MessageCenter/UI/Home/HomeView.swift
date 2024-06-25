@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
-
+    
+    @EnvironmentObject var nwConnectivity: NetworkConnectivity
     @FocusState var emailTextFieldFocusState: Bool
     @AppStorage("userEmailId") var emailIdString: String = ""
-    @EnvironmentObject var nwConnectivity: NetworkConnectivity
     
     @State var showEmailAlert = false
     @State private var path = NavigationPath()
@@ -84,8 +84,4 @@ struct HomeView: View {
             }
         }
     }
-}
-
-#Preview {
-    HomeView()
 }
