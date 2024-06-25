@@ -39,10 +39,13 @@ Tested on the following devices/Sim:
 - Unit Tests for network call and email validation.
 - Logger class that allows filtering of messages by module in  the console.
 
-## Demo Video
+## Demo 
 
 https://github.com/jmuthialu/MessageCenter/assets/10758530/73b8d3d3-74e0-4d10-92e4-ab13f1f28dc6
 
+## Demo Network Connectivity
+
+https://github.com/jmuthialu/MessageCenter/assets/10758530/57e938de-3372-4f6f-a841-e79168dc0442
 
 ## Folder Structure
 
