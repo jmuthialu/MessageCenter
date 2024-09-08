@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  build:
+  buildJay:
     docker:
       - image: alpine:3.15
     steps:
